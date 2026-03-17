@@ -70,7 +70,7 @@ Watch the register and data memory values change with each tick\! Note that sinc
 
 
 <img width="488" height="868" alt="image" src="https://github.com/user-attachments/assets/185f5120-75b0-4db1-a404-16b1eeae0645" />
-![][image10]
+
 
 To be more specific, the instructions the CPU should follow (in plain english) are:  
 Set X1 to 1 from the data memory.  
