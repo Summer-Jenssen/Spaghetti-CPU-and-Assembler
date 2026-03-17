@@ -67,7 +67,7 @@ Watch the register and data memory values change with each tick\! Note that sinc
 
 	After doing so, the state of the data memory and registers should be as follows:
 <img width="425" height="441" alt="image" src="https://github.com/user-attachments/assets/8cc9fc8a-b9b3-4bb6-9eaa-47d727450d5e" />
-![][image9]
+
 
 <img width="488" height="868" alt="image" src="https://github.com/user-attachments/assets/185f5120-75b0-4db1-a404-16b1eeae0645" />
 ![][image10]
