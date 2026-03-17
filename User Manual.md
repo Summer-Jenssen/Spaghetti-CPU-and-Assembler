@@ -13,8 +13,9 @@ Spaghetti CPU User Manual
 1.1 Anatomy of Spaghetti (CPU Architecture)  
 This CPU ended up having wires all over the place, hence why it’s a “spaghetti” CPU.  It features 4 registers, referred to as X1, X2, X3, and X4. It can load, store, add, and subtract values contained within these registers. As a note, output pins are everywhere here to allow you to easily see what values are being carried in each wire.   
 A quick breakdown of what's going on in each section:  
-![][image1]  
-	This is the first thing you are likely to see. This section features the PC (which automatically gets updated with the adder and constant seem to its left), clock, and instruction memory. All very self explanatory.  
+<img width="1318" height="517" alt="Screenshot 2026-03-17 142019" src="https://github.com/user-attachments/assets/690b56ce-e1c1-4c0e-8f3a-2fd397b79bb1" />
+
+This is the first thing you are likely to see. This section features the PC (which automatically gets updated with the adder and constant seem to its left), clock, and instruction memory. All very self explanatory.  
 ![][image2]   
 	This little bit is just to the right of that last chunk. This is where the output from the instruction memory is split into individual bits. Rm, Rn, and Rt are all labeled. The first two bits tell the ALU which instruction to compute. All of the and gates essentially check for specific instructions, as certain values need to be set depending on them. The first AND gate checks if we have a subtract instruction to let a MUX seen later near the ALU to output from the subtractor instead of the adder. The second AND gate from the top is labeled as the toggle for writeEnable. This checks if we have a STR instruction, since that is the only case in which we are not writing to the registers and instead to the data memory. The third helps to decide where to get data from when updating the registers (this is sent to another MUX seen later). For example, if this is an LDR instruction, we should update from the data memory, and NOT the ALU.  
 ![][image3]  
