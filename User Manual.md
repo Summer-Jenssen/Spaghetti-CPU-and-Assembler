@@ -1,17 +1,14 @@
-Summer Jenssen  
-Professor Hao  
-CS382 A  
-10 December 2025  
-Spaghetti CPU User Manual
+This CPU ended up having wires all over the place, hence why it’s a “spaghetti” CPU. It was an exercise to test my knowledge of CPU architecture and implement some basic fucntionalitty. I utilized Logism Evolution to create it, but if you don't have that program, no worries! There are plenty of pictures below showcasing all the gates and whatnot involved. Lastly, in 4.1 I walk you through setting up the demo code (as usual, pictures provided!), which is a quick and easy way to get a grasp of what it can do!
+
 
 1.1 … Anatomy of spaghetti (CPU Architecture)  
 2.1 … Creating a recipe (Assembly Code & Binary Encoding)  
 2.2 … 	Fetching ingredients (Creating your Instruction Memory Image)  
 3.1 … Cooking your spaghetti (Running your Program on the CPU)  
-4.1 … Behold, the perfect spaghetti\! (Demo Program)
+4.1 … Behold, the perfect spaghetti! (Demo Program)
 
 1.1 Anatomy of Spaghetti (CPU Architecture)  
-This CPU ended up having wires all over the place, hence why it’s a “spaghetti” CPU.  It features 4 registers, referred to as X1, X2, X3, and X4. It can load, store, add, and subtract values contained within these registers. As a note, output pins are everywhere here to allow you to easily see what values are being carried in each wire.   
+This CPU features 4 registers, referred to as X1, X2, X3, and X4. It can load, store, add, and subtract values contained within these registers. As a note, output pins are everywhere here to allow you to easily see what values are being carried in each wire.   
 A quick breakdown of what's going on in each section:  
 <img width="1318" height="517" alt="Screenshot 2026-03-17 142019" src="https://github.com/user-attachments/assets/690b56ce-e1c1-4c0e-8f3a-2fd397b79bb1" />
 
