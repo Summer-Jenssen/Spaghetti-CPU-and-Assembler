@@ -16,11 +16,14 @@ A quick breakdown of what's going on in each section:
 <img width="1318" height="517" alt="Screenshot 2026-03-17 142019" src="https://github.com/user-attachments/assets/690b56ce-e1c1-4c0e-8f3a-2fd397b79bb1" />
 
 This is the first thing you are likely to see. This section features the PC (which automatically gets updated with the adder and constant seem to its left), clock, and instruction memory. All very self explanatory.  
-![][image2]   
+<img width="1326" height="602" alt="Screenshot 2026-03-17 142140" src="https://github.com/user-attachments/assets/c958c2d9-125b-4d48-952b-aa046aadff13" />
+![][image2]  
 	This little bit is just to the right of that last chunk. This is where the output from the instruction memory is split into individual bits. Rm, Rn, and Rt are all labeled. The first two bits tell the ALU which instruction to compute. All of the and gates essentially check for specific instructions, as certain values need to be set depending on them. The first AND gate checks if we have a subtract instruction to let a MUX seen later near the ALU to output from the subtractor instead of the adder. The second AND gate from the top is labeled as the toggle for writeEnable. This checks if we have a STR instruction, since that is the only case in which we are not writing to the registers and instead to the data memory. The third helps to decide where to get data from when updating the registers (this is sent to another MUX seen later). For example, if this is an LDR instruction, we should update from the data memory, and NOT the ALU.  
-![][image3]  
+<img width="1324" height="859" alt="image" src="https://github.com/user-attachments/assets/e24aedad-3d65-492f-9dce-9dc86b98a762" />
+![][image3] 
 	This is the register file\! As you can see it’s pretty standard, except for the fact that it has a THIRD read port. This is important for stuff like the STR instruction, where the data memory needs to know what data needs to get stored inside of it. The third read port is needed because the first two get used for the address and the offset. You’ll see more about this later when the binary encoding is discussed.   
-![][image4]  
+<img width="1197" height="940" alt="image" src="https://github.com/user-attachments/assets/b83773fa-ef87-4012-b53a-42134e988f7a" />
+![][image4] 
 	This is the ALU\! It takes input from the first two read ports, computes their addition and subtraction, and the little MUX at the bottom is the one discussed earlier that determines which value gets sent out to the data memory or registers.   
 ![][image5]  
 	Last part of this mess, the data memory\! Nothing too special, it takes in an address and data value and can write to itself or be read from when needed. The MUX in the bottom left is another of the ones discussed earlier that decides whether to send output from the data memory or ALU to the registers. 
